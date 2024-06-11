@@ -239,7 +239,7 @@ func NewRouter(
 					} else {
 						continue
 					}
-				} else if notIpAddress != nil && strings.Contains(server.Address, ".") {
+				} else if notIpAddress && strings.Contains(server.Address, ".") {
 					//Use routing by singbox
 					checkDNSLoopDomainName = serverURL.Host
 					// return nil, E.New("parse dns server[", tag, "]: missing address_resolver")
